@@ -30,9 +30,14 @@ import {
 } from 'lucide-react';
 
 // --- Safe Environment Variable Fetching ---
-const getEnv = (key) => {
-  try {
-    // Check Vite/Vercel standard
+const firebaseConfig = {
+  "apiKey": "PASTE_YOUR_API_KEY_HERE",
+  "authDomain": "PASTE_YOUR_DOMAIN_HERE",
+  "projectId": "PASTE_YOUR_PROJECT_ID_HERE",
+  "storageBucket": "PASTE_YOUR_BUCKET_HERE",
+  "messagingSenderId": "PASTE_YOUR_SENDER_ID_HERE",
+  "appId": "PASTE_YOUR_APP_ID_HERE"
+};
     if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env[key]) {
       return import.meta.env[key];
     }
